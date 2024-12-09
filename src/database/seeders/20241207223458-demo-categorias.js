@@ -25,10 +25,9 @@ module.exports = {
         updatedAt: new Date(),
       },
     ], {});
-    
   },
 
-  async down (queryInterface, Sequelize) {    
+  async down (queryInterface, Sequelize) {
     await queryInterface.bulkDelete('categorias', null, {});
   }
 };

@@ -9,7 +9,7 @@ module.exports = (sequelize, DataTypes) => {
         foreignKey: 'estudante_id'
       });
       Matricula.belongsTo(models.Curso, {
-        foreignKey: 'curso_ide'
+        foreignKey: 'curso_id'
       });
     }
   }
@@ -18,7 +18,8 @@ module.exports = (sequelize, DataTypes) => {
   }, {
     sequelize,
     modelName: 'Matricula',
-    tableName: 'matriculas'
+    tableName: 'matriculas',
+    paranoid: true
   });
   return Matricula;
 };
